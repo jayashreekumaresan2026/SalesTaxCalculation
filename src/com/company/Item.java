@@ -14,4 +14,8 @@ public class Item {
         void showName() {
             System.out.println("Item Name :" + name);
         }
+    @Override
+    public String toString() {
+        return "Item Name :" + name + "\nItem quantity : " + quantity + "\nItem Price :" + price + "\n";
+    }
 }
