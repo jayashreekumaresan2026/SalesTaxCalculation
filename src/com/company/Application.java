@@ -43,5 +43,12 @@ public class Application {
         System.out.println("---------------------------------");
         Items itemList = new Items(items);
         itemList.calculateSalesTax();
+        List<String> exemptedItemList = itemList.getExemptedSalesTaxItems();
+        System.out.println("---------------------------------");
+        System.out.println("Excluded Tax for Items :");
+        for (Item item : items) {
+            item.isExemptedTaxItem(exemptedItemList);
+        }
+        System.out.println("---------------------------------");
     }
 }
