@@ -20,11 +20,7 @@ public class Item {
     public String toString() {
         return "Item Name :" + name + "\nItem quantity : " + quantity + "\nItem Price :" + price + "\n";
     }
-    Double CostCalculation() {
-        Double totalCost = 0.0;
-        totalCost += price;
-        return totalCost;
-    }
+
     void showCalculation(double taxCost) {
         System.out.println("Item Name :" + name + " \t" + "Tax cost of an Item :" + taxCost);
     }
@@ -34,6 +30,20 @@ public class Item {
                 System.out.println("ItemName :" + name + "  " + "ItemCost :" + CostCalculation());
             }
         }
+    }
+    Double CostCalculation() {
+        Double totalCost = 0.0;
+        totalCost += price;
+        return totalCost;
+    }
+    Double itemCostCalculation() {
+        Double itemCost = 0.0;
+        itemCost += price*quantity;
+        return itemCost;
+    }
+
+    void totalCost(Double finalCost) {
+        System.out.println("Item Name :" + name + "\nItem quantity : " + quantity + "\nItem Price :" + finalCost+ "\n");
     }
 
 }
