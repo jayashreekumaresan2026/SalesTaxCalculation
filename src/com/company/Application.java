@@ -50,5 +50,8 @@ public class Application {
             item.isExemptedTaxItem(exemptedItemList);
         }
         System.out.println("---------------------------------");
+        System.out.println("Total cost of all items :");
+        itemList.calculatedTotalCostAndSalesTax();
+        System.out.println("---------------------------------");
     }
 }
