@@ -24,5 +24,13 @@ public class Items {
     List<String> getExemptedSalesTaxItems() {
         return exemptedSalesTaxItems;
     }
+    void calculatedTotalCostAndSalesTax( ) {
+        for (Item item : items) {
+            Double cost=item.itemCostCalculation();
+            Double finalCost = cost +TaxAmount*item.CostCalculation();
+            item.totalCost(finalCost);
+
+        }
+    }
 
 }
