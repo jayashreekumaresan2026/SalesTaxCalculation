@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.List;
+
 public class Item {
         private String name;
         private int quantity;
@@ -25,6 +27,13 @@ public class Item {
     }
     void showCalculation(double taxCost) {
         System.out.println("Item Name :" + name + " \t" + "Tax cost of an Item :" + taxCost);
+    }
+    void isExemptedTaxItem(List<String> exemptedSalesTaxItems) {
+        for (int i = 0; i < exemptedSalesTaxItems.size(); i++) {
+            if (exemptedSalesTaxItems.get(i).equalsIgnoreCase(name)) {
+                System.out.println("ItemName :" + name + "  " + "ItemCost :" + CostCalculation());
+            }
+        }
     }
 
 }
