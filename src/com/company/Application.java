@@ -41,5 +41,7 @@ public class Application {
             System.out.println(item.toString());
         }
         System.out.println("---------------------------------");
+        Items itemList = new Items(items);
+        itemList.calculateSalesTax();
     }
 }
